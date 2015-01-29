@@ -57,7 +57,6 @@
     
     if ([self.embedChildViewControllerInNavigationController boolValue]) {
         self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.childViewController];
-        DBG_VIEW_FRAMEC(self.navigationController.view, magentaColor);
         childViewController = self.navigationController;
     }
 
