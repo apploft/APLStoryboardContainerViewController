@@ -1,20 +1,16 @@
-APLRKNetworkLayer
+APLStoryboardContainerViewController
 =========
-Base- and helper classes for App communicating with Restful APIs via RestKit.
+A view controller which can load and embed other view controller from different storyboards.
 
-* A network layer base class which helps to quickly setup RestKit to connect to a Restful API
-* Helper methods for Facebook-Login
-* Network aware base view controller whith built-in handling for data loading, showing overlays while loading data or when no data have been loaded yet by a view controller, 
-  automatic handling when loading data failed etc.
+* In a storyboard insert an ordinary view controller. Set at least the property 'storyboardName' for this view controller. The storyboard name specifies the storyboard from which to load another view controller which will then automatically loaded and embedded as child view controller. If the property 'viewControllerName' is not set the initial view controller of the storyboard will be loaded.
 
 ## Installation
 Install via cocoapods by adding this to your Podfile:
 
-	pod "APLRKNetworkLayer", "~> 0.0.1"
+	pod "APLStoryboardContainerViewController", "~> 0.0.1"
 
 ## Usage
 Import header file:
 
-	#import "APLRKNetwork.h"
+	#import "APLStoryboardContainerViewController.h"
 	
-Derive classes from APLRKNetworkLayer, APLRKApiConnector, APLRKBaseViewController to setup your specific network layer.
