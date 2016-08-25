@@ -53,4 +53,12 @@
  */
 -(void)prepareViewControllerForAppearance:(UIViewController*)viewController;
 
+/**
+ *  An override point for subclasses. Subclasses can return a subclass of UINavigationController which 
+ *  will be used when embedding child view controller. See 'embedChildViewControllerInNavigationController'.
+ *
+ *  @return the navigation controller class to use. By default UINavigationController will be returned.
+ */
+-(Class)navigationControllerClass;
+
 @end

@@ -56,7 +56,7 @@
     UIViewController *childViewController = self.childViewController;
     
     if ([self.embedChildViewControllerInNavigationController boolValue]) {
-        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.childViewController];
+        self.navigationController = [[[self navigationControllerClass] alloc] initWithRootViewController:self.childViewController];
         childViewController = self.navigationController;
     }
 
@@ -94,6 +94,10 @@
     if (oldChild) {
         [self removeChildViewController:oldChild];
     }
+}
+
+-(Class)navigationControllerClass {
+    return [UINavigationController class];
 }
 
 #pragma mark - Rotation handling
