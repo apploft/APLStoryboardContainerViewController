@@ -102,7 +102,7 @@
 
 #pragma mark - Rotation handling
 
--(NSUInteger)supportedInterfaceOrientations {
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return [self.childViewController supportedInterfaceOrientations];
 }
 
