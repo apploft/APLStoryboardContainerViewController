@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "APLStoryboardContainerViewController"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "A container view controller which can automatically load view controller from different storyboards and embed them as child view controller."
 
   s.description  = <<-DESC
@@ -18,14 +18,11 @@ Pod::Spec.new do |s|
 
   s.authors          = { "Tino Rachui" => "tino.rachui@apploft.de", "Mathias Koehnke" => "mathias.koehnke@apploft.de" }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
 
-  s.source       = { :git => "https://github.com/apploft/APLStoryboardContainerViewController.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/apploft/APLStoryboardContainerViewController.git", :tag => s.version.to_s }
 
   s.source_files  = 'Classes', 'Classes/**/*.{h,m}', 'Classes/Private/**/*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
-
-  # s.public_header_files = 'Classes/**/*.h'
-
   s.requires_arc = true
 end
